@@ -12,26 +12,27 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'wookiehangover/jshint.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'mfukar/robotframework-vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Shutnik/jshint2.vim'
+Plugin 'Raimondi/delimitMate'
+" Highlighting
+Plugin 'mfukar/robotframework-vim'
 Plugin 'qbbr/vim-twig'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils' "dependencies for vim-snipmate
+Plugin 'tomtom/tlib_vim' "dependencies for vim-snipmate
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+" Colorscheme
 Plugin 'morhetz/gruvbox'
 Plugin 'jtai/vim-womprat'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'w0ng/vim-hybrid'
 " Active pluginll of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " JSHint configuration
-"let JSHintUpdateWriteOnly=1
-"let g:JSHintHighlightErrorLine = 0
+let JSHintUpdateWriteOnly=1
+let g:JSHintHighlightErrorLine = 0
 
 " NERDTree configuration
 let g:NERDTreeDirArrows=0
@@ -41,7 +42,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 syntax on
 set wmh=0 " set minum windows height to 0
 set number
-set noswapfile
+eet noswapfile
 set smartindent
 set autoindent
 set expandtab
@@ -55,6 +56,8 @@ set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 set foldmethod=indent
 set foldlevel=20
 set background=dark
+
+"let g:hybrid_custom_term_colors = 1
 colorscheme hybrid
 "colorscheme solarized
 
